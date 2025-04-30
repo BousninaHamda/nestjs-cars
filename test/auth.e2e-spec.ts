@@ -17,14 +17,15 @@ describe('Authentication System (e2e)', () => {
   });
 
   it('handles a signup request', () => {
+    const email = 'test@test.com';
     return request(app.getHttpServer())
       .post('/auth/signup')
-      .send({ email: 'asdfasdf@asdf.com', password: 'asdf' })
+      .send({ email, password: 'asdf' })
       .expect(201)
       .then((res) => {
         const { id, email } = res.body;
         expect(id).toBeDefined();
-        expect(email).toEqual('asdfasdf@asdf.com');
+        expect(email).toEqual(email);
       });
   });
 });
