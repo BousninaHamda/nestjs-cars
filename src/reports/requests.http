@@ -1,14 +1,15 @@
+### Create a new report 
 POST http://localhost:3000/reports
 content-type: application/json
 
 {
-    "make": "Toyota",
-    "model": "Corolla",
-    "year": 2020,
-    "mileage": 15000,
-    "lng": 0,
-    "lat": 0, 
-    "price": 20000
+    "make": "Ford",
+    "model": "Ranger",
+    "year": 2025,
+    "mileage": 3000,
+    "lng": 50,
+    "lat": 50, 
+    "price": 76000
 }
 
 ### update report approval
@@ -20,4 +21,4 @@ content-type: application/json
 }
 
 ### get an estimate for an existing vehicle
-GET http://localhost:3000/reports?make=Toyota&model=Corolla&year=2020&mileage=15000&lng=0&lat=0
+GET http://localhost:3000/reports?make=Ford&model=Ranger&year=2025&mileage=3000&lng=50&lat=50
